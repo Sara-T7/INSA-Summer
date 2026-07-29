@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="card wide">
+  <div class="topbar">
+    <div>
+      <h1 id="greeting">Dashboard</h1>
+      <p class="subtitle" id="emailLine"></p>
+    </div>
+    <button class="logout" id="logoutBtn">Log out</button>
+  </div>
+
+  <div class="warning-box" id="suspiciousBox">
+    This login came from a new device or location. If this wasn't you, revoke it below and change your password.
+  </div>
+
+  <h1 style="font-size:16px;margin-top:28px;">Active sessions</h1>
+  <p class="subtitle">Devices currently signed in to your account.</p>
+
+  <table>
+    <thead>
+      <tr><th>Device / Browser</th><th>IP Address</th><th>Last active</th><th>Status</th><th></th></tr>
+    </thead>
+    <tbody id="sessionsBody">
+      <tr><td colspan="5" class="subtitle">Loading…</td></tr>
+    </tbody>
+  </table>
+
+  <div class="error-box" id="errorBox"></div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

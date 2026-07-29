@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+<div class="card">
+  <h1>Welcome back</h1>
+  <p class="subtitle">Sign in to your account</p>
+
+  <div id="googleBtn"></div>
+
+  <div class="divider">or continue with email</div>
+
+  <form id="loginForm">
+    <label for="email">Email</label>
+    <input type="email" id="email" required autocomplete="email">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" required autocomplete="current-password">
+
+    <button type="submit" class="primary" id="submitBtn">Sign In</button>
+  </form>
+
+  <div class="error-box" id="errorBox"></div>
+  <div class="warning-box" id="warningBox"></div>
+
+  <p class="footer-link">Don't have an account? <a href="register.html">Create one</a></p>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
